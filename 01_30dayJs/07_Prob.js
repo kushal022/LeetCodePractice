@@ -70,8 +70,20 @@ var reduce = function(nums, fn, init) {
     return result;
 };
 
+//2nd sol
+var reduce2 = function(nums, fn, init) {
+    let accum = init;
+    nums.forEach(element => {
+        accum = fn(accum, element)
+    });
+
+
+    return accum
+};
+
 const nums = [1,2,3,4]
 const fn = function sum(accum, curr) { return accum + curr * curr; }
 const init = 100
 
 console.log(reduce(nums,fn,init)) // 130
+console.log(reduce2(nums,fn,init)) // 130
