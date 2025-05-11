@@ -63,11 +63,11 @@ Constraints:
 
 //todo:----> Solution:
 var reduce = function(nums, fn, init) {
-    let result = init;
+    let accum = init;
     for (let i = 0; i < nums.length; i++) {
-        result = fn(result, nums[i]);
+        accum = fn(accum, nums[i]);
     }
-    return result;
+    return accum;
 };
 
 //2nd sol
@@ -76,8 +76,6 @@ var reduce2 = function(nums, fn, init) {
     nums.forEach(element => {
         accum = fn(accum, element)
     });
-
-
     return accum
 };
 
