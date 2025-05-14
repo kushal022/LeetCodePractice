@@ -29,7 +29,7 @@ args is a valid JSON array
 
 //todo: solution: 
 var argumentsLength = function(...args) {
-    return [...args].length
+    return args.length
 };
 
 console.log(argumentsLength(4,5)) // 2
