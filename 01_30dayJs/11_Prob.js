@@ -118,3 +118,19 @@ console.time()
 // let effResult = memoize(square)
 console.log(effResult(5))       //! 25 ; time= 0.52ms
 console.timeEnd()
+
+
+/*
+💡 What is Memoization?
+Memoization is an optimization technique that caches the result of expensive 
+function calls and returns the cached result when the same inputs occur again.
+
+🧠 Summary:
+This memoizeFun function ensures that:
+
+Repeated calls with the same arguments are super fast
+
+Original function is only called once per unique input
+
+Works well for pure functions (same input → same output)
+*/
